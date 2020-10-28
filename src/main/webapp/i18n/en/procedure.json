@@ -1,0 +1,42 @@
+{
+  "vHelperApp": {
+    "procedure": {
+      "home": {
+        "title": "Procedures",
+        "createLabel": "Create a new Procedure",
+        "createOrEditLabel": "Create or edit a Procedure",
+        "notFound": "No Procedures found"
+      },
+      "created": "A new Procedure is created with identifier {{ param }}",
+      "updated": "A Procedure is updated with identifier {{ param }}",
+      "deleted": "A Procedure is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Procedure {{ id }}?"
+      },
+      "detail": {
+        "title": "Procedure"
+      },
+      "methodForDeterminingTheSupplier": "Method For Determining The Supplier",
+      "purchaseStage": "Purchase Stage",
+      "number": "Number",
+      "electronicSite": "Electronic Site",
+      "electronicAuctionSubject": "Electronic Auction Subject",
+      "typesOfWork": "Types Of Work",
+      "organizationName": "Organization Name",
+      "email": "Email",
+      "phone": "Phone",
+      "contactPerson": "Contact Person",
+      "deadlineForSubmission": "Deadline For Submission",
+      "deadlineConsideration": "Deadline Consideration",
+      "dateOfTheElectronicAuction": "Date Of The Electronic Auction",
+      "timeOfTheElectronicAuction": "Time Of The Electronic Auction",
+      "initialContractPrice": "Initial Contract Price",
+      "applicationSecurityAmount": "Application Security Amount",
+      "contractSecurityAmount": "Contract Security Amount",
+      "turnaroundTime": "Turnaround Time",
+      "created": "Created",
+      "edited": "Edited",
+      "status": "Status"
+    }
+  }
+}

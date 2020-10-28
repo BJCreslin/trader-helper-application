@@ -3,7 +3,7 @@ package ru.bjcreslin.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Properties specific to Traderhelper Application.
+ * Properties specific to V Helper.
  * <p>
  * Properties are configured in the {@code application.yml} file.
  * See {@link io.github.jhipster.config.JHipsterProperties} for a good example.

@@ -12,8 +12,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-    url: jdbc:tc:postgresql:12.3:///traderhelperApplication?TC_TMPFS=/testtmpfs:rw
-    username: traderhelperApplication
+    url: jdbc:tc:postgresql:12.3:///VHelper?TC_TMPFS=/testtmpfs:rw
+    username: VHelper
     password:
     hikari:
       poolName: Hikari

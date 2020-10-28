@@ -8,7 +8,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.time.Instant;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,8 +18,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
-import ru.bjcreslin.RedisTestContainerExtension;
-import ru.bjcreslin.TraderhelperApplicationApp;
+import ru.bjcreslin.VHelperApp;
 import ru.bjcreslin.domain.PersistentAuditEvent;
 import ru.bjcreslin.repository.PersistenceAuditEventRepository;
 import ru.bjcreslin.security.AuthoritiesConstants;
@@ -30,8 +28,7 @@ import ru.bjcreslin.security.AuthoritiesConstants;
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = TraderhelperApplicationApp.class)
-@ExtendWith(RedisTestContainerExtension.class)
+@SpringBootTest(classes = VHelperApp.class)
 @Transactional
 public class AuditResourceIT {
     private static final String SAMPLE_PRINCIPAL = "SAMPLE_PRINCIPAL";

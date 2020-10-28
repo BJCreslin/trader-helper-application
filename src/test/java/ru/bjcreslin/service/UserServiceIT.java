@@ -12,7 +12,6 @@ import java.util.Optional;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,8 +20,7 @@ import org.springframework.data.auditing.DateTimeProvider;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.transaction.annotation.Transactional;
-import ru.bjcreslin.RedisTestContainerExtension;
-import ru.bjcreslin.TraderhelperApplicationApp;
+import ru.bjcreslin.VHelperApp;
 import ru.bjcreslin.config.Constants;
 import ru.bjcreslin.domain.User;
 import ru.bjcreslin.repository.UserRepository;
@@ -31,8 +29,7 @@ import ru.bjcreslin.service.dto.UserDTO;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = TraderhelperApplicationApp.class)
-@ExtendWith(RedisTestContainerExtension.class)
+@SpringBootTest(classes = VHelperApp.class)
 @Transactional
 public class UserServiceIT {
     private static final String DEFAULT_LOGIN = "johndoe";

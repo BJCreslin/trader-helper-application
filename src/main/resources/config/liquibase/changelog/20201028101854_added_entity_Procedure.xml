@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Procedure.
+    -->
+    <changeSet id="20201028101854-1" author="jhipster">
+        <createTable tableName="procedure">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="method_for_determining_the_supplier" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="purchase_stage" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="number" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="electronic_site" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="electronic_auction_subject" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="types_of_work" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="organization_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="phone" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="contact_person" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="deadline_for_submission" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="deadline_consideration" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_of_the_electronic_auction" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="time_of_the_electronic_auction" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="initial_contract_price" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="application_security_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="contract_security_amount" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="turnaround_time" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="created" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="edited" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="procedure" columnName="deadline_for_submission" columnDataType="datetime"/>
+        <dropDefaultValue tableName="procedure" columnName="deadline_consideration" columnDataType="datetime"/>
+        <dropDefaultValue tableName="procedure" columnName="date_of_the_electronic_auction" columnDataType="datetime"/>
+        <dropDefaultValue tableName="procedure" columnName="time_of_the_electronic_auction" columnDataType="datetime"/>
+        <dropDefaultValue tableName="procedure" columnName="created" columnDataType="datetime"/>
+        <dropDefaultValue tableName="procedure" columnName="edited" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20201028101854-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20201028101854-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/procedure.csv"
+                  separator=";"
+                  tableName="procedure">
+            <column name="id" type="numeric"/>
+            <column name="method_for_determining_the_supplier" type="string"/>
+            <column name="purchase_stage" type="string"/>
+            <column name="number" type="numeric"/>
+            <column name="electronic_site" type="string"/>
+            <column name="electronic_auction_subject" type="string"/>
+            <column name="types_of_work" type="string"/>
+            <column name="organization_name" type="string"/>
+            <column name="email" type="string"/>
+            <column name="phone" type="string"/>
+            <column name="contact_person" type="string"/>
+            <column name="deadline_for_submission" type="datetime"/>
+            <column name="deadline_consideration" type="datetime"/>
+            <column name="date_of_the_electronic_auction" type="datetime"/>
+            <column name="time_of_the_electronic_auction" type="datetime"/>
+            <column name="initial_contract_price" type="numeric"/>
+            <column name="application_security_amount" type="numeric"/>
+            <column name="contract_security_amount" type="numeric"/>
+            <column name="turnaround_time" type="string"/>
+            <column name="created" type="datetime"/>
+            <column name="edited" type="datetime"/>
+            <column name="status" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

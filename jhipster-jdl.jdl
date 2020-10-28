@@ -1,0 +1,49 @@
+
+application {
+  config {
+    baseName VHelper,
+    applicationType monolith,
+    packageName ru.bjcreslin,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework react
+  }
+  entities *
+}
+
+entity Procedure {
+methodForDeterminingTheSupplier String,
+purchaseStage String,
+number Long,
+electronicSite String,
+electronicAuctionSubject String,
+typesOfWork String,
+organizationName String,
+email String,
+phone String,
+contactPerson String,
+deadlineForSubmission ZonedDateTime,
+deadlineConsideration ZonedDateTime,
+dateOfTheElectronicAuction ZonedDateTime,
+timeOfTheElectronicAuction ZonedDateTime,
+initialContractPrice BigDecimal,
+applicationSecurityAmount BigDecimal,
+contractSecurityAmount BigDecimal,
+turnaroundTime String,
+created ZonedDateTime,
+edited ZonedDateTime,
+status ProcedureStatus
+}
+
+enum ProcedureStatus{
+    NEW,
+	CLOSED,
+	ENDED,
+	ACTIVE,
+    DELETED,
+    STOPED
+}
+
+
+
+    

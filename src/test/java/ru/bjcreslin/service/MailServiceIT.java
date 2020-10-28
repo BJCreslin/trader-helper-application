@@ -21,7 +21,6 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.MockitoAnnotations;
@@ -32,20 +31,18 @@ import org.springframework.context.MessageSource;
 import org.springframework.mail.MailSendException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.thymeleaf.spring5.SpringTemplateEngine;
-import ru.bjcreslin.RedisTestContainerExtension;
-import ru.bjcreslin.TraderhelperApplicationApp;
+import ru.bjcreslin.VHelperApp;
 import ru.bjcreslin.config.Constants;
 import ru.bjcreslin.domain.User;
 
 /**
  * Integration tests for {@link MailService}.
  */
-@SpringBootTest(classes = TraderhelperApplicationApp.class)
-@ExtendWith(RedisTestContainerExtension.class)
+@SpringBootTest(classes = VHelperApp.class)
 public class MailServiceIT {
     private static final String[] languages = {
-        "ru",
         "en",
+        "fr",
         // jhipster-needle-i18n-language-constant - JHipster will add/remove languages in this array
     };
     private static final Pattern PATTERN_LOCALE_3 = Pattern.compile("([a-z]{2})-([a-zA-Z]{4})-([a-z]{2})");

@@ -1,0 +1,102 @@
+{
+  "name": "Procedure",
+  "fields": [
+    {
+      "fieldName": "methodForDeterminingTheSupplier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "purchaseStage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "number",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "electronicSite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "electronicAuctionSubject",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typesOfWork",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "organizationName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactPerson",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deadlineForSubmission",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "deadlineConsideration",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "dateOfTheElectronicAuction",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "timeOfTheElectronicAuction",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "initialContractPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "applicationSecurityAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "contractSecurityAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "turnaroundTime",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "edited",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ProcedureStatus",
+      "fieldValues": "NEW,CLOSED,ENDED,ACTIVE,DELETED,STOPED"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201028101854",
+  "entityTableName": "procedure",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["VHelper"]
+}

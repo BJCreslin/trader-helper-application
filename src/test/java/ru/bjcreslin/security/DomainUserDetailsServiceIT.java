@@ -7,22 +7,19 @@ import java.util.Locale;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.transaction.annotation.Transactional;
-import ru.bjcreslin.RedisTestContainerExtension;
-import ru.bjcreslin.TraderhelperApplicationApp;
+import ru.bjcreslin.VHelperApp;
 import ru.bjcreslin.domain.User;
 import ru.bjcreslin.repository.UserRepository;
 
 /**
  * Integrations tests for {@link DomainUserDetailsService}.
  */
-@SpringBootTest(classes = TraderhelperApplicationApp.class)
-@ExtendWith(RedisTestContainerExtension.class)
+@SpringBootTest(classes = VHelperApp.class)
 @Transactional
 public class DomainUserDetailsServiceIT {
     private static final String USER_ONE_LOGIN = "test-user-one";

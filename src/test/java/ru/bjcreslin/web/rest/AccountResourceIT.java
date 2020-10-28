@@ -19,7 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
-import ru.bjcreslin.TraderhelperApplicationApp;
+import ru.bjcreslin.VHelperApp;
 import ru.bjcreslin.config.Constants;
 import ru.bjcreslin.domain.User;
 import ru.bjcreslin.repository.AuthorityRepository;
@@ -36,7 +36,7 @@ import ru.bjcreslin.web.rest.vm.ManagedUserVM;
  */
 @AutoConfigureMockMvc
 @WithMockUser(value = TEST_USER_LOGIN)
-@SpringBootTest(classes = TraderhelperApplicationApp.class)
+@SpringBootTest(classes = VHelperApp.class)
 public class AccountResourceIT {
     static final String TEST_USER_LOGIN = "test";
 

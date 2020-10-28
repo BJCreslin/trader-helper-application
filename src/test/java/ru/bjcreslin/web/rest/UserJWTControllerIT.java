@@ -10,7 +10,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,8 +18,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
-import ru.bjcreslin.RedisTestContainerExtension;
-import ru.bjcreslin.TraderhelperApplicationApp;
+import ru.bjcreslin.VHelperApp;
 import ru.bjcreslin.domain.User;
 import ru.bjcreslin.repository.UserRepository;
 import ru.bjcreslin.web.rest.vm.LoginVM;
@@ -29,8 +27,7 @@ import ru.bjcreslin.web.rest.vm.LoginVM;
  * Integration tests for the {@link UserJWTController} REST controller.
  */
 @AutoConfigureMockMvc
-@SpringBootTest(classes = TraderhelperApplicationApp.class)
-@ExtendWith(RedisTestContainerExtension.class)
+@SpringBootTest(classes = VHelperApp.class)
 public class UserJWTControllerIT {
     @Autowired
     private UserRepository userRepository;

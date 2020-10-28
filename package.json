@@ -1,7 +1,7 @@
 {
-  "name": "traderhelper-application",
+  "name": "v-helper",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for traderhelperApplication",
+  "description": "Description for VHelper",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

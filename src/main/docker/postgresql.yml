@@ -1,11 +1,11 @@
 version: '2'
 services:
-  traderhelperapplication-postgresql:
+  vhelper-postgresql:
     image: postgres:12.3
     # volumes:
-    #     - ~/volumes/jhipster/traderhelperApplication/postgresql/:/var/lib/postgresql/data/
+    #     - ~/volumes/jhipster/VHelper/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=traderhelperApplication
+      - POSTGRES_USER=VHelper
       - POSTGRES_PASSWORD=
       - POSTGRES_HOST_AUTH_METHOD=trust
     ports:
